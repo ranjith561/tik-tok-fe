@@ -5,12 +5,6 @@ export default function Header() {
       style={{ height: "60px" }}>
       <div className="container-fluid">
         <div className="d-flex align-items-center gap-2">
-          {/* <img
-            src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png"
-            alt="logo"
-            width="35"
-            height="35"
-          /> */}
           <span className="fw-bold fs-5">TikTok Shop</span>
         </div>
       </div>

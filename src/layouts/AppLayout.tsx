@@ -6,12 +6,11 @@ export default function AppLayout() {
     <div
       className="d-flex flex-column overflow-hidden"
       style={{ height: "100vh" }}>
-      {/* HEADER (5% height) */}
+
       <div className="flex-shrink-0" style={{ height: "5vh" }}>
         <Header />
       </div>
 
-      {/* CONTENT AREA (95% height, no scroll) */}
       <div
         className="flex-grow-1 overflow-hidden bg-light p-3"
         style={{ height: "95vh" }}>
