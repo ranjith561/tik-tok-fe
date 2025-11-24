@@ -4,7 +4,7 @@ import { ServiceResult } from "../types/serviceResult";
 export interface CommisionItem {
   orderId: string | number;
   internalPartnerId: string | number;
-  commisionAmount: number;
+  commissionAmount: number;
   status: string;
 }
 

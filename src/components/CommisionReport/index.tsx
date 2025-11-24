@@ -10,7 +10,7 @@ import "./index.css";
 const HEAD_CELLS: { id: keyof CommisionItem; label: string }[] = [
   { id: "orderId", label: "Order ID" },
   { id: "internalPartnerId", label: "Internal Partner ID" },
-  { id: "commisionAmount", label: "Commision Amount" },
+  { id: "commissionAmount", label: "Commision Amount" },
   { id: "status", label: "Status" },
 ];
 
