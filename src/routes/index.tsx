@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Login from "../components/Login";
 import PrivateRoute from "./PrivateRoute";
 import AppLayout from "../layouts/AppLayout";
@@ -11,21 +16,27 @@ export default function AppRoutes() {
   return (
     <Router>
       <Routes>
-        {/* Public Route */}
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={token ? <Navigate to="/app/commision" replace /> : <Login />}
+        />
+        <Route
+          path="/"
+          element={token ? <Navigate to="/app/commision" replace /> : <Login />}
+        />
 
-        {/* Protected Parent Layout /app */}
         <Route
           path="/app"
           element={
             <PrivateRoute>
               <AppLayout />
             </PrivateRoute>
-          }>
+          }
+        >
           <Route path="commision" element={<CommisionReport />} />
         </Route>
 
-        <Route path="*" element={token ? <NotFound /> : <Login />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );
